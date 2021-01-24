@@ -97,7 +97,7 @@ function divide(){
         console.log("             2---for subtraction");
         console.log("             3--for multiplication");
         console.log("             4---for division");
-        let operationChoice = window.prompt("enter here: ");
+        let operationChoice = window.prompt("enter your operation choice here: ");
 
         if(operationChoice==1) addition()
         
