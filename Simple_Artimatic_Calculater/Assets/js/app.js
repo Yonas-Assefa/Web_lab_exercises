@@ -89,8 +89,8 @@ function divide(){
 //this is the main iife function
 (function(){
 
-
-    while(true){
+    let loopItrator = true;
+    while(loopItrator){
         console.log("wellcome to the simple calculater:");
         console.log("please choose the operation you would like to perform: ");
         console.log("Press -------1---for addition");
@@ -107,6 +107,14 @@ function divide(){
 
         else if(operationChoice==4) divide();
         else console.log("you haven't entered the correct choice!!")
+
+        loopItrator = prompt("press x to exit the program and any key to continue!!")
+        if(loopItrator=='x'){
+            console.log("thank you for using this program.GoodBye!!!!!") 
+            loopItrator = false
+         }
+
+
     }
     
 })()
