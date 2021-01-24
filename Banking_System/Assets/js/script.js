@@ -1,6 +1,7 @@
 let personal_account = {
     name:"",
     deposite:0,
+    Account_ID:0
 }
 //function to deposite
 function deposite(amount){
@@ -43,16 +44,33 @@ function transfer(amount, reciver_ID){
 }
 
 
+//function to generate a random account number
+function account_number() { 
+    var minm = 10000; 
+    var maxm = 99999; 
+    return Account_num = Math.floor(Math 
+    .random() * (maxm - minm + 1)) + minm; 
+}
 
 //the main iife function
 (function(){
+    let loop_controler= true;
+    while(loop_controler){
+        console.log("press x to terminate and any key to continue: ")
+        prompt("enter here")
+    }
     let amount;
     console.log("Welcome to our bank");
     console.log("Please press-----1---to create an account");
     console.log("                 2---if you already have an account");
     let user_type = prompt("enter your choice here: ");
     if(user_type ==1){
-
+            console.log("welcome. please enter your name: ")
+            personal_account.name = prompt("enter here: ");
+            console.log("enter initial amount of moeny you would like to deposite: ");
+            personal_account.amount = prompt("enter here: ");
+            console.log("Thank you for banking with us. Your account is created and  your acount number is: " + account_number()) ;
+            personal_account.Account_ID = account_number();
     }
     else if(user_type ==2){
         console.log("Please press-----1---to withdraw");
@@ -74,6 +92,7 @@ function transfer(amount, reciver_ID){
 
         if(operation_type==3){
             balance();
+            
         }
 
         if(operation_type==4){
